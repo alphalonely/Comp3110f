@@ -65,6 +65,15 @@ def evaluatePair(
 
     return correctCount, totalCount
 
+def get_file_paths(datasetDir, baseName, allowed_exts=(".java", ".c", ".md", ".py", ".txt")):
+    for ext in allowed_exts:
+        oldFile = os.path.join(datasetDir, f"{baseName}_old{ext}")
+        newFile = os.path.join(datasetDir, f"{baseName}_new{ext}")
+        if os.path.exists(oldFile) and os.path.exists(newFile):
+            return oldFile, newFile
+    return None, None
+
+
 
 def main() -> None:
     currentDir = os.path.dirname(os.path.abspath(__file__))
@@ -86,9 +95,11 @@ def main() -> None:
     for csvName in csvFiles:
         csvFile = os.path.join(datasetDir, csvName)
         baseName = os.path.splitext(csvName)[0]
-
-        oldFile = os.path.join(datasetDir, f"{baseName}_old.java")
-        newFile = os.path.join(datasetDir, f"{baseName}_new.java")
+  
+        oldFile, newFile = get_file_paths(datasetDir, baseName)
+        if oldFile is None or newFile is None:
+             print(f"❌ 没找到匹配的文件: {baseName}")
+             continue
 
         correctCount, totalCount = evaluatePair(
             oldFile, newFile, csvFile, similarityLevel
