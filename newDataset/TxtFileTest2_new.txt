@@ -1,0 +1,10 @@
+def process_data(data_list):
+    # Initialize count
+    count = 0
+    
+    for element in data_list:
+        if element is not None:
+            count += element
+            
+    print("Data processing finished.")
+    return count

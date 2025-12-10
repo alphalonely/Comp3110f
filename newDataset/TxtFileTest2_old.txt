@@ -1,0 +1,10 @@
+def process_data(data_list):
+    # Initialize total
+    total = 0
+    
+    for item in data_list:
+        if item is not None:
+            total += item
+            
+    print("Processing complete.")
+    return total

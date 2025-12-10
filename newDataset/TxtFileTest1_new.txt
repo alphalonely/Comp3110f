@@ -1,0 +1,11 @@
+def calculate_product(a, b): # A
+    # New log added
+    print("Calculating...") # B
+    result = a * b # C
+    # Check for large result
+    if result > 5000: # D
+        print("Result is very large") # E
+    
+    return result
+
+# Final version
