@@ -2,9 +2,9 @@
 Final project
 
 ## Team Members
-- **Jingsheng Qiu** - qiu32@uwindsor.ca
-- **Albert He** - Healber@uwindsor.ca
-- **Duc Nguyen** - nguyen7x@uwindsor.ca
+- **Jingsheng Qiu** - qiu32@uwindsor.ca - Pathpasser
+- **Albert He** - Healber@uwindsor.ca - Albertho0865
+- **Duc Nguyen** - nguyen7x@uwindsor.ca - alphalonely
 
 ## Evaluation Results
 ### Provided Eclipse Dataset
