@@ -85,9 +85,9 @@ How to use:
     
 2. Evaluate the eclipseTest dataset
   
-   - Ensure that the eclipseTest folder and eclipseTest.py are in the same directory
+   - Ensure that the eclipseTest folder and eclipseDataset.py are in the same directory
    
-   - Run `python eclipseTest.py` directly
+   - Run `python eclipseDataset.py` directly
    - Output: `testEclipse.csv`
 
 3. Evaluate the newDataset
