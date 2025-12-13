@@ -98,7 +98,7 @@ def main() -> None:
   
         oldFile, newFile = get_file_paths(datasetDir, baseName)
         if oldFile is None or newFile is None:
-             print(f"❌ 没找到匹配的文件: {baseName}")
+             print(f"Skipping {baseName}: paired files not found")
              continue
 
         correctCount, totalCount = evaluatePair(
@@ -130,4 +130,5 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+
     main()
